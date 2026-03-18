@@ -6,17 +6,17 @@ import Signup from "./components/Signup.jsx";
 
 const route = createBrowserRouter([
     {
-        Path:"/",
-       element:<MainOutlet/>,
-       errorElement:<>error page</>,
-       children:[
-        {index:true , element:<Login/>},
-        {path:"/login" , element:<Login/>},
-        {path:"/signup" , element:<Signup/>},
-        
-       ]
-    
-    
+        Path: "/",
+        element: <MainOutlet />,
+        errorElement: <>error page</>,
+        children: [
+            { index: true, element: <Login /> },
+            { path: "/login", element: <Login /> },
+            { path: "/signup", element: <Signup /> },
+
+        ]
+
+
     }
 ])
 

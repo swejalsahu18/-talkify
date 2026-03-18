@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const Login = () => {
 
@@ -12,6 +13,27 @@ const Login = () => {
 
     let handleChange =(e)=>{
        setLogin({...Login, [e.target.name] : e.target.value})
+    }
+
+    let handleLogin = async()=>{
+     
+        let loginData = {
+            email: login.username,
+            password: login.password
+        }
+
+
+        let URL = "https://api.skillsvarz.com/api/login"
+        let resp = await fetch(URL, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(loginData)
+        })
+        let res = await resp.json()
+        
+
     }
 
   return (
@@ -48,7 +70,7 @@ const Login = () => {
 
     <p className="text-sm text-center mt-4">
       don't have an account ?{" "}
-      <Link to="/signup" className="text-blue-500 hover:underline">
+      <Link to="/signup" className="text-blue-500 hover:underline"  onClick={handleLogin}>
         Signup
       </Link>
     </p>
