@@ -27,7 +27,7 @@ const Signup = () => {
     
         
         
-        let URL = "https://api.skillsvarz.com/api/users"
+        let URL = "https://api.skillsvarz.com/api/users"  
         let resp = await fetch(URL,{
             method : "POST",
             headers : {
@@ -37,83 +37,90 @@ const Signup = () => {
         })
 
         let res = await resp.json()
-console.log(res);
+         console.log(res)
   }
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-2xl shadow-lg w-80">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
 
-        <label htmlFor="uname" className="block text-sm font-medium mb-1">
-          Name :
-        </label>
-        <input
-          onChange={handleChange}
-          type="text"
-          name="uname"
-          placeholder="enter your username"
-          className="w-full px-3 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+  <div className="w-80 p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
 
-        <label htmlFor="uemail" className="block text-sm font-medium mb-1">
-          Email :
-        </label>
-        <input
-          onChange={handleChange}
-          type="email"
-          name="uemail"
-          placeholder="enter your email"
-          className="w-full px-3 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+    <h2 className="text-2xl font-semibold text-white text-center mb-6">
+      Create Account 🚀
+    </h2>
 
-        <label htmlFor="umobile" className="block text-sm font-medium mb-1">
-          Phone No. :
-        </label>
-        <input
-          onChange={handleChange}
-          type="number"
-          name="umobile"
-          placeholder="enter your Phone number"
-          className="w-full px-3 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+    <label className="block text-sm text-gray-300 mb-1">
+      Name
+    </label>
+    <input
+      type="text"
+      name="uname"
+      onChange={handleChange}
+      placeholder="Enter your name"
+      className="w-full px-3 py-2 mb-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+    />
 
-        <label htmlFor="pass" className="block text-sm font-medium mb-1">
-          Password :
-        </label>
-        <input
-          onChange={handleChange}
-          type="password"
-          name="pass"
-          placeholder="enter your password"
-          className="w-full px-3 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+    <label className="block text-sm text-gray-300 mb-1">
+      Email
+    </label>
+    <input
+      type="email"
+      name="uemail"
+      onChange={handleChange}
+      placeholder="Enter your email"
+      className="w-full px-3 py-2 mb-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+    />
 
-        <label htmlFor="cpass" className="block text-sm font-medium mb-1">
-          Confirm password :
-        </label>
-        <input
-          onChange={handleChange}
-          type="password"
-          name="cpass"
-          placeholder="Confirm your password"
-          className="w-full px-3 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+    <label className="block text-sm text-gray-300 mb-1">
+      Phone No.
+    </label>
+    <input
+      type="number"
+      name="umobile"
+      onChange={handleChange}
+      placeholder="Enter your phone number"
+      className="w-full px-3 py-2 mb-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+    />
 
-        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"
-          onClick={handleSignup}>
-          Signup
-        </button>
+    <label className="block text-sm text-gray-300 mb-1">
+      Password
+    </label>
+    <input
+      type="password"
+      name="pass"
+      onChange={handleChange}
+      placeholder="Enter your password"
+      className="w-full px-3 py-2 mb-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+    />
 
-        <p className="text-sm text-center mt-4">
-          Already have an Account?
-          <Link to="/login" className="text-blue-500 hover:underline">
-            login
-          </Link>
-        </p>
+    <label className="block text-sm text-gray-300 mb-1">
+      Confirm Password
+    </label>
+    <input
+      type="password"
+      name="cpass"
+      onChange={handleChange}
+      placeholder="Confirm your password"
+      className="w-full px-3 py-2 mb-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+    />
 
-      </div>
-    </div>
+    <button
+      onClick={handleSignup}
+      className="w-full py-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:scale-105 hover:shadow-lg transition duration-200"
+    >
+      Signup
+    </button>
+
+    <p className="text-sm text-gray-400 text-center mt-4">
+      Already have an account?{" "}
+      <Link to="/login" className="text-blue-400 hover:underline">
+        Login
+      </Link>
+    </p>
+
+  </div>
+</div>
   )
 }
 
