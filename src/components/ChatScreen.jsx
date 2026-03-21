@@ -6,7 +6,7 @@ const ChatScreen = () => {
    
   
   return (
-    <div className="flex flex-col h-screen w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div className="flex flex-col h-screen w-full bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
 
       {/* Chat Header */}
       <div className="flex items-center gap-3 p-3 mt-1 border-b border-gray-700 bg-gray-900/60 backdrop-blur">

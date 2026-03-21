@@ -50,7 +50,7 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
   
   <div className="w-80 p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
 
@@ -82,7 +82,7 @@ const Login = () => {
 
     <button
       onClick={handleLogin}
-      className="w-full py-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:scale-105 hover:shadow-lg transition duration-200"
+      className="w-full py-2 rounded-lg bg-linear-to-r from-blue-500 to-indigo-600 text-white font-medium hover:scale-105 hover:shadow-lg transition duration-200"
     >
       Login
     </button>

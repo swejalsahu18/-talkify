@@ -107,7 +107,7 @@ const Signup = () => {
 
     <button
       onClick={handleSignup}
-      className="w-full py-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:scale-105 hover:shadow-lg transition duration-200"
+      className="w-full py-2 rounded-lg bg-linear-to-r from-blue-500 to-indigo-600 text-white font-medium hover:scale-105 hover:shadow-lg transition duration-200"
     >
       Signup
     </button>
