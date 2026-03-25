@@ -86,6 +86,9 @@ const Login = () => {
     >
       Login
     </button>
+    <h1 className='text-sm text-gray-300 cursor-pointer m-2' onClick={()=>{
+      redirect("/forget")
+    }}>Forget Password?</h1>
 
     <p className="text-sm text-gray-400 text-center mt-4">
       Don't have an account?{" "}

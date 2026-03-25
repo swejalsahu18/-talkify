@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 const Signup = () => {
+
+  let redirect=useNavigate()
 
   const [sign, setSign] = useState({
     uname: "",
@@ -37,7 +39,14 @@ const Signup = () => {
         })
 
         let res = await resp.json()
-         console.log(res)
+          
+        if(resp.status===200||resp.status===201){
+          toast.success("Account Created Successsfully")
+          setTimeout(()=>{
+            redirect("/user")
+          },1000)
+
+        }
   }
 
 
